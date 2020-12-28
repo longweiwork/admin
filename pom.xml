@@ -12,6 +12,7 @@
         <module>common</module>
         <module>mbg</module>
         <module>security</module>
+        <module>manage</module>
     </modules>
 
     <parent>
@@ -37,6 +38,8 @@
         <spring-data-commons.version>2.1.5.RELEASE</spring-data-commons.version>
         <jjwt.version>0.9.0</jjwt.version>
         <logstash-logback.version>4.8</logstash-logback.version>
+        <pagehelper-starter.version>1.2.10</pagehelper-starter.version>
+        <pagehelper.version>5.1.8</pagehelper.version>
     </properties>
 
     <dependencies>
@@ -60,6 +63,10 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
 
     </dependencies>
@@ -125,6 +132,20 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
+            </dependency>
+
+            <!--MyBatis分页插件starter-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-starter.version}</version>
+            </dependency>
+
+            <!--MyBatis分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
             </dependency>
 
             <!--Mysql数据库驱动-->
